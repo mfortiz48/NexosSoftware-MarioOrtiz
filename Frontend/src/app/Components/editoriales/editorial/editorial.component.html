@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-8 offset-md-2">
+
+      <div class="card">
+
+        <div class="card-body">
+
+          <h4 class="title"> Editoriales</h4>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row mt-4">
+    <div class="col-md-8 offset-2 ">
+      <div class="card">
+        <div class="card-body">
+
+
+
+          <form [formGroup]="FormEditorial" (ngSubmit)="InsertEditorial()">
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-building" [class.green-icon]="this.FormEditorial.get('Nombre')?.valid"
+                  [class.red-icon]="this.FormEditorial.get('Nombre')?.invalid && this.FormEditorial.get('Nombre')?.touched "></i>
+
+              </span>
+              <input formControlName="Nombre" type="text" class="form-control" placeholder="Nombre de la Editorial"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-map-marker-alt" [class.green-icon]="this.FormEditorial.get('Direccion')?.valid"
+                  [class.red-icon]="this.FormEditorial.get('Direccion')?.invalid && this.FormEditorial.get('Direccion')?.touched "></i>
+              </span>
+              <input formControlName="Direccion" type="text" class="form-control" placeholder="Direccion"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-phone" [class.green-icon]="this.FormEditorial.get('Telefono')?.valid"
+                  [class.red-icon]="this.FormEditorial.get('Telefono')?.invalid && this.FormEditorial.get('Telefono')?.touched "></i>
+              </span>
+              <input formControlName="Telefono" type="text" class="form-control" placeholder="Telefono"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="far fa-envelope" [class.green-icon]="this.FormEditorial.get('Email')?.valid"
+                  [class.red-icon]="this.FormEditorial.get('Email')?.invalid && this.FormEditorial.get('Email')?.touched "></i>
+              </span>
+              <input formControlName="Email" type="email" class="form-control" placeholder="E-mail"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-book" [class.green-icon]="this.FormEditorial.get('LibrosRegistrados')?.valid"
+                  [class.red-icon]="this.FormEditorial.get('LibrosRegistrados')?.invalid && this.FormEditorial.get('LibrosRegistrados')?.touched "></i>
+              </span>
+              <input formControlName="LibrosRegistrados" type="number" class="form-control" placeholder="Libros Registrados"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+            <div class="d-grid gap 2">
+              <button [disabled]="this.FormEditorial.invalid" type="submit" class="btn btn-primary btn-lg btn-block">
+                <i class="far fa-save"></i>&nbsp; Registar</button>
+
+            </div>
+
+
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>

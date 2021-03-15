@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-8 offset-md-2">
+
+      <div class="card">
+
+        <div class="card-body">
+
+          <h4 class="title"> Editoriales</h4>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row mt-4">
+    <div class="col-md-8 offset-2 ">
+      <div class="card">
+        <div class="card-body">
+
+
+
+          <form [formGroup]="FormLibro" (ngSubmit)="InsertAutor()">
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-heading" [class.green-icon]="this.FormLibro.get('Titulo')?.valid"
+                  [class.red-icon]="this.FormLibro.get('Titulo')?.invalid && this.FormLibro.get('Titulo')?.touched "></i>
+
+              </span>
+              <input formControlName="Titulo" type="text" class="form-control" placeholder="Titulo del Libro"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-table" [class.green-icon]="this.FormLibro.get('Año')?.valid"
+                  [class.red-icon]="this.FormLibro.get('Año')?.invalid && this.FormLibro.get('Año')?.touched "></i>
+              </span>
+              <input formControlName="Año" type="text" class="form-control" placeholder="Año de Lanzamiento"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-heart" [class.green-icon]="this.FormLibro.get('Genero')?.valid"
+                  [class.red-icon]="this.FormLibro.get('Genero')?.invalid && this.FormLibro.get('Genero')?.touched "></i>
+              </span>
+              <input formControlName="Genero" type="text" class="form-control" placeholder="Genero"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="far fa-file" [class.green-icon]="this.FormLibro.get('NumeroPaginas')?.valid"
+                  [class.red-icon]="this.FormLibro.get('NumeroPaginas')?.invalid && this.FormLibro.get('NumeroPaginas')?.touched "></i>
+              </span>
+              <input formControlName="NumeroPaginas" type="email" class="form-control" placeholder="Numero de Paginas"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-user-alt" [class.green-icon]="this.FormLibro.get('Libro_Autor')?.valid"
+                  [class.red-icon]="this.FormLibro.get('Libro_Autor')?.invalid && this.FormLibro.get('Libro_Autor')?.touched "></i>
+              </span>
+              <input formControlName="Libro_Autor" type="number" class="form-control" placeholder="Autor"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+
+
+
+            <div class="input-group mb-3">
+              <span class="input-group-text input-group-lg" id="basic-addon1">
+                <i class="fas fa-building" [class.green-icon]="this.FormLibro.get('Libro_Editorial')?.valid"
+                  [class.red-icon]="this.FormLibro.get('Libro_Editorial')?.invalid && this.FormLibro.get('Libro_Editorial')?.touched "></i>
+              </span>
+              <input formControlName="Libro_Editorial" type="number" class="form-control" placeholder="Editorial"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+            <div class="d-grid gap 2">
+              <button [disabled]="this.FormLibro.invalid" type="submit" class="btn btn-primary btn-lg btn-block">
+                <i class="far fa-save"></i>&nbsp; Registar</button>
+
+            </div>
+
+
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
