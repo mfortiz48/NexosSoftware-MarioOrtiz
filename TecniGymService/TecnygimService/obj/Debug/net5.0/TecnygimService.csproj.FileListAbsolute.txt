@@ -9,7 +9,6 @@ C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimS
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\bin\Debug\net5.0\TecnygimService.pdb
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\bin\Debug\net5.0\TecnygimService.Views.dll
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\bin\Debug\net5.0\TecnygimService.Views.pdb
-C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.csprojAssemblyReference.cache
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.AssemblyInfoInputs.cache
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.AssemblyInfo.cs
@@ -38,3 +37,4 @@ C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimS
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.pdb
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.genruntimeconfig.cache
 C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.csproj.CopyComplete
+C:\Users\Desarrollo\Documents\NexosSoftware-MarioOrtiz\TecniGymService\TecnygimService\obj\Debug\net5.0\TecnygimService.csprojAssemblyReference.cache
