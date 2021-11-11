@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario_Ortiz_API", "Mario_Ortiz_API\Mario_Ortiz_API.csproj", "{0BC4D5EE-E0C5-482F-BC5A-A23244B49944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_SERVICES", "Mario_Ortiz_API\API_SERVICES.csproj", "{0BC4D5EE-E0C5-482F-BC5A-A23244B49944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

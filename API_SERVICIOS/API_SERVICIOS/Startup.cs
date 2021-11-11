@@ -12,15 +12,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore; // vrs.mortiz
+using API_SERVICIOS.Model; // vrs.mfortiz
 using Microsoft.EntityFrameworkCore.SqlServer; // vrs mfortiz
-using Mario_Ortiz_API.Models; // vrs.mfortiz
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Mario_Ortiz_API.Controllers.ViewModel;
-using Mario_Ortiz_API.Controllers.ViewModel.Editorial; 
-using Mario_Ortiz_API.Controllers.ViewModel.Autor;
-using Mario_Ortiz_API.Controllers.ViewModel.Libro;
+using API_SERVICIOS.Controllers.ViewModel.Clientes;
 
-namespace Mario_Ortiz_API
+namespace API_SERVICIOS
 {
     public class Startup
     {
@@ -35,30 +31,24 @@ namespace Mario_Ortiz_API
         public void ConfigureServices(IServiceCollection services)
         {
             // cadena de conexion vrs.0001
-            services.AddDbContextPool<_DbContex>(
+            services.AddDbContextPool<_DbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("connectionString")));
-            
+
 
 
             // Inyeccion De Dependencia
-            services.AddScoped<IEditorialService, EditorialService>();
-            services.AddScoped<IAutorService, AutorService>();
-            services.AddScoped<ILibroService, LibroService>();
+            services.AddScoped<IClienteService, ClienteService>();
+
 
             services.AddCors(options => options.AddPolicy("AllowWebApp", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
-            services.AddMvc();
-            services.AddControllers();
 
-            
+
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mario_Ortiz_API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API_SERVICIOS", Version = "v1" });
             });
-
-
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,22 +56,10 @@ namespace Mario_Ortiz_API
         {
             if (env.IsDevelopment())
             {
-
-                app.UseCors("AllowWebApp");
-
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                //
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mario_Ortiz_API v1"));
-
-
-                app.UseSwaggerUI(options => { options.DefaultModelsExpandDepth(-1); });
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API_SERVICIOS v1"));
             }
-
-            
-       
-
-
 
             app.UseHttpsRedirection();
 
